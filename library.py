@@ -1,8 +1,4 @@
-import os
 
-
-proj_lib = os.path.join(os.path.join(conda_dir, 'share'), 'proj')
-os.environ["PROJ_LIB"] = proj_lib
 
 # Install requirements
 import geopandas as gpd
