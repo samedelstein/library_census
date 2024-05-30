@@ -1,21 +1,12 @@
-import subprocess
-import sys
-import streamlit as st
+import conda
+import os
 
-def install_requirements():
-    try:
-        result = subprocess.run([sys.executable, "-m", "pip", "install", "-r", "requirements.txt"], capture_output=True, text=True)
-        if result.returncode == 0:
-            st.success("All packages installed successfully.")
-        else:
-            st.error("Failed to install packages.")
-        st.text(result.stdout)
-        st.text(result.stderr)
-    except Exception as e:
-        st.error(f"An error occurred: {e}")
+conda_file_dir = conda.__file__
+conda_dir = conda_file_dir.split('lib')[0]
+proj_lib = os.path.join(os.path.join(conda_dir, 'share'), 'proj')
+os.environ["PROJ_LIB"] = proj_lib
 
 # Install requirements
-install_requirements()
 import geopandas as gpd
 import pandas as pd
 import streamlit as st
