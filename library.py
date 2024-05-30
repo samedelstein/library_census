@@ -41,7 +41,26 @@ gdf_census_tracts_onondaga = gdf_census_tracts_onondaga.merge(census_df, left_on
 
 # Sidebar for selection
 selected_column = st.sidebar.selectbox("Select a value to color the census tracts:", census_df.columns)
+dropdown_list = [
+'percentage_only_cell_data_plan: Percentage of people with only a cell data plan and no other internet subscription',
+'percentage_with_computer: Percentage of people with a computer',
+'percentage_with_computer_and_broadband: Percentage of those with a computer that have broadband',
+'percentage_no_vehicle: Percentage of people with no vehicle',
+'percentage_public_transportation: Percentage of people that use public transportation to get to work',
+'percentage_walked: Percentage of people that walk to get to work',
+'percentage_wfh: Percentage of people that work from home',
+'percentage_in_labor_pool: Percentage of people currently in labor pool',
+'percentage_in_same_house_17_and_under: Percentage of people that lived in the same home 12 months ago',
+'percentage_rent_above_50: Percentage of people that pay more than half of their monthly income to rent',
+'percentage_snap: Percentage of people who have received SNAP/Food Stamps in the past 12 months',
+'percentage_ssi: Percentage of people that have received SSI, other public assistance, or SNAP in the last 12 months',
+'percentage_poverty: Percent living in poverty'
+]
 
+# Display the list as bullet points
+st.sidebar.markdown("Data based on the 2022 ACS 5-year Survey")
+
+st.sidebar.markdown('\n'.join([f"- {i}" for i in dropdown_list]))
 # Sidebar for selecting color scale
 
 # Convert the GeoDataFrame to GeoJSON
