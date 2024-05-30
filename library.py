@@ -1,3 +1,21 @@
+import subprocess
+import sys
+import streamlit as st
+
+def install_requirements():
+    try:
+        result = subprocess.run([sys.executable, "-m", "pip", "install", "-r", "requirements.txt"], capture_output=True, text=True)
+        if result.returncode == 0:
+            st.success("All packages installed successfully.")
+        else:
+            st.error("Failed to install packages.")
+        st.text(result.stdout)
+        st.text(result.stderr)
+    except Exception as e:
+        st.error(f"An error occurred: {e}")
+
+# Install requirements
+install_requirements()
 import geopandas as gpd
 import pandas as pd
 import streamlit as st
