@@ -142,10 +142,13 @@ fig = px.line(
     title=f'Census Data Over Time by {selected_column} and Library Name',
     color_discrete_sequence=px.colors.qualitative.Plotly  # Change this to any other color scale you prefer
 )
+max_index = libraries_with_tracts[selected_column].idxmax()
+# Get the corresponding value in the Library Name column
+library_name_with_max_value = libraries_with_tracts.loc[max_index, 'Library Name']
 
 # Update traces to set the initial visibility
 for trace in fig.data:
-    if trace.name != 'Central Library':
+    if trace.name != library_name_with_max_value:
         trace.visible = 'legendonly'
 
 # Display the figure in Streamlit
