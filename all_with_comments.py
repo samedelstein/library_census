@@ -8,7 +8,34 @@ import plotly.express as px
 import streamlit.components.v1 as components
 import zipfile
 
+# Function to load and display the survey app
+def show_survey_app():
+    # Load the dataset
+    file_path = 'output.csv'
+    df = pd.read_csv(file_path)
 
+    # Filter the columns with "Open-Ended Response" in their names
+    open_ended_cols = [col for col in df.columns if "Open-Ended Response" in col]
+
+    # Sidebar filter for Library branches, sorted alphabetically
+    library_branch = st.sidebar.selectbox(
+        "Select Library Branch",
+        sorted(df['Library_Response_Changes'].dropna().unique())
+    )
+
+    # Filter the dataframe by the selected library branch
+    filtered_df = df[df['Library_Response_Changes'] == library_branch]
+
+    # Display the open-ended responses
+    st.title(f"Open-Ended Responses for {library_branch}")
+
+    for col in open_ended_cols:
+        st.subheader(f"**{col}**")
+        responses = filtered_df[col].dropna().tolist()
+        if responses:
+            st.markdown('\n'.join([f"- {response}" for response in responses]))
+        else:
+            st.markdown("- No responses")
 
 # Function to load and display the bus routes and libraries app
 def show_bus_routes_libraries_app():
@@ -212,10 +239,11 @@ def show_library_census_app():
 # Main app to combine all three apps
 def main():
     st.sidebar.title("Navigation")
-    app = st.sidebar.radio("Go to", ["Library Census Data", "Libraries and Bus Routes"])
+    app = st.sidebar.radio("Go to", ["Library Census Data", "Survey Responses", "Libraries and Bus Routes"])
 
-
-    if app == "Libraries and Bus Routes":
+    if app == "Survey Responses":
+        show_survey_app()
+    elif app == "Libraries and Bus Routes":
         show_bus_routes_libraries_app()
     elif app == "Library Census Data":
         show_library_census_app()
