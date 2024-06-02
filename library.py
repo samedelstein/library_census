@@ -143,14 +143,19 @@ fig = px.line(
     color_discrete_sequence=px.colors.qualitative.Plotly  # Change this to any other color scale you prefer
 )
 max_index = libraries_with_tracts[selected_column].idxmax()
+min_index = libraries_with_tracts[selected_column].idxmin()
+
 # Get the corresponding value in the Library Name column
 library_name_with_max_value = libraries_with_tracts.loc[max_index, 'Library Name']
+library_name_with_min_value = libraries_with_tracts.loc[min_index, 'Library Name']
 
 # Update traces to set the initial visibility
 for trace in fig.data:
-    if trace.name != library_name_with_max_value:
+    if trace.name not in [library_name_with_max_value, library_name_with_min_value]:
         trace.visible = 'legendonly'
 
 # Display the figure in Streamlit
 st.plotly_chart(fig)
+st.write('The chart above shows change over time by library branch. By default it shows the brach with the highest and lowest values in 2022, but you can select other branches by clicking on their name to display on the chart.')
+
 
