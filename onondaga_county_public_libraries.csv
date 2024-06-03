@@ -1,33 +1,33 @@
 Library Name,Address,City,State,Zip Code,Latitude,Longitude
-Baldwinsville Public Library,33 E Genesee St,Baldwinsville,NY,13027,43.157,-76.3313
-Beauchamp Branch Library,2111 S Salina St,Syracuse,NY,13205,43.0245,-76.1444
-Betts Branch Library,4862 S Salina St,Syracuse,NY,13205,43.0112,-76.1448
-Brewerton NOPL,5440 Bennett St,Brewerton,NY,13029,43.2364,-76.1385
-Central Library,447 S Salina St,Syracuse,NY,13202,43.0481,-76.1513
-Cicero NOPL,8686 Knowledge Ln,Cicero,NY,13039,43.1771,-76.1206
-Community Library of DeWitt & Jamesville,5110 Jamesville Rd,DeWitt,NY,13078,43.0078,-76.0862
-East Syracuse Free Library,4990 James St,East Syracuse,NY,13057,43.0665,-76.075
-Elbridge Free Library,241 E Main St,Elbridge,NY,13060,43.033,-76.4478
-Fairmount Community Library,406 Chapel Dr,Syracuse,NY,13219,43.0458,-76.241
-Fayetteville Free Library,300 Orchard St,Fayetteville,NY,13066,43.0284,-76.0044
-Hazard Branch Library,1620 W Genesee St,Syracuse,NY,13204,43.0512,-76.1736
-Jordan Bramley Library,15 Mechanic St,Jordan,NY,13080,43.0656,-76.4725
-LaFayette Public Library,2577 US-11,LaFayette,NY,13084,42.8924,-76.1966
-Liverpool Public Library,310 Tulip St,Liverpool,NY,13088,43.1059,-76.211
-Manlius Library,1 Arkie Albanese Ave,Manlius,NY,13104,43.0017,-75.9784
-Marcellus Free Library,32 Maple St,Marcellus,NY,13108,42.9825,-76.3404
-Maxwell Memorial Library,14 Genesee St,Camillus,NY,13031,43.0396,-76.3031
-Minoa Library,242 N Main St,Minoa,NY,13116,43.077,-76.0007
-Mundy Branch Library,1204 S Geddes St,Syracuse,NY,13204,43.04,-76.1675
-North Syracuse NOPL,100 Trolley Barn Ln,North Syracuse,NY,13212,43.1334,-76.1304
-Onondaga Free Library,4840 W Seneca Turnpike,Syracuse,NY,13215,43.0126,-76.1952
-Paine Branch Library,113 Nichols Ave,Syracuse,NY,13224,43.0532,-76.1188
-Petit Branch Library,105 Victoria Pl,Syracuse,NY,13210,43.0377,-76.1254
-Salina Library,100 Belmont St,Mattydale,NY,13211,43.1039,-76.1555
-Skaneateles Library,49 E Genesee St,Skaneateles,NY,13152,42.945,-76.4291
-Solvay Public Library,615 Woods Rd,Solvay,NY,13209,43.067,-76.2234
-Soule Branch Library,101 Springfield Rd,Syracuse,NY,13214,43.0406,-76.1103
-Syracuse Community Connections Library,401-441 E Fayette St,Syracuse,NY,13202,43.0454,-76.1486
-Syracuse Northeast Community Center,716 Hawley Ave,Syracuse,NY,13203,43.0581,-76.1322
-Tully Free Library,12 State St,Tully,NY,13159,42.7981,-76.1092
-White Branch Library,763 Butternut St,Syracuse,NY,13208,43.0698,-76.143
+Beauchamp Branch Library,2111 South Salina St., Syracuse,NY,13205,43.025932,-76.145047
+Betts Branch Library,4862 South Salina St., Syracuse,NY,13205,42.998765,-76.143649
+Central Library,447 South Salina St., Syracuse,NY,13202-2494,43.045928,-76.151702
+Hazard Branch Library,1620, West Genesee Street Syracuse,NY,13204,43.053013,-76.187367
+Mundy Branch Library,1204, South Geddes St Syracuse,NY,13204,43.035741,-76.174638
+Syracuse Northeast Community Center Library,716 Hawley Ave., Syracuse,NY,13203,43.054799,-76.132268
+Paine Branch Library,113 Nichols Ave., Syracuse,NY,13206,43.068445,-76.10354
+Petit Branch Library,105, Victoria Place Syracuse,NY,13210,43.040947,-76.118461
+Soule Branch Library,101, Springfield Road Syracuse,NY,13214,43.048245,-76.094036
+Syracuse Community Connections Library,401, South Ave Syracuse,NY,13204,43.03487,-76.158431
+White Branch Library,763 Butternut St., Syracuse,NY,13208,43.061544,-76.145517
+Baldwinsville Public Library,33 East Genesee St., Baldwinsville,NY,13027,43.159165,-76.329417
+Brewerton NOPL,5440, Bennett Steet Brewerton,NY,13029,43.239,-76.14236
+Cicero NOPL,8686, Knowledge Lane Cicero,NY,13039,43.190821,-76.126966
+Community Library of DeWitt & Jamesville,5110, Jamesville Road DeWitt,NY,13078,43.019646,-76.072011
+East Syracuse Free Library,4990, James Street East Syracuse,NY,13057,43.069512,-76.073162
+Elbridge Free Library,241, East Main Street Elbridge,NY,13060,43.036465,-76.438106
+Fairmount Community Library,406, Chapel Drive Syracuse,NY,13219,43.044224,-76.246976
+Fayetteville Free Library,300, Orchard Street Fayetteville,NY,13066,43.02575,-76.007065
+Jordan Bramley Library,15, Mechanic Street Jordan,NY,13080,43.065765,-76.471001
+LaFayette Public Library,2577 US ROUTE 11, LaFayette,NY,13084,42.896785,-76.107197
+Liverpool Public Library,310, Tulip Street Liverpool,NY,13088-4997,43.102819,-76.207873
+Manlius Library,1 Arkie Albanese Ave., Manlius,NY,13104,43.003329,-75.985093
+Marcellus Free Library,32, Maple Street Marcellus,NY,13108,42.985609,-76.336527
+Maxwell Memorial Library,14, Genesee Street Camillus,NY,13031,43.039333,-76.306286
+Minoa Library,242 N. Main St., Minoa,NY,13116,43.077345,-76.000547
+North Syracuse NOPL,100, Trolley Barn Lane North Syracuse,NY,13212,43.136246,-76.12565
+Onondaga Free Library,4840, West Seneca Turnpike Syracuse,NY,13215,43.004139,-76.181006
+Salina Library,100, Belmont Street Mattydale,NY,13211,43.100073,-76.150211
+Skaneateles Library,49 E., Genesee Street Skaneateles,NY,13152,42.945853,-76.427509
+Solvay Public Library,615, Woods Road Solvay,NY,13209,43.057678,-76.207053
+Tully Free Library,12, State Street Tully,NY,13159,42.797222,-76.110165
