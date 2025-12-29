@@ -12,6 +12,8 @@ def main():
 
     if app == "Libraries and Bus Routes":
         show_bus_routes_libraries_app()
+    elif app == "Survey Responses":
+        show_survey_app()
     elif app == "Library Census Data":
         show_library_census_app()
 
