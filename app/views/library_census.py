@@ -79,11 +79,11 @@ def show_library_census_app():
     )
 
     libraries_with_tracts = gpd.sjoin(
-        libraries_gdf, gdf_census_tracts_onondaga_2022, how="left", predicate="within"
+        libraries_gdf, gdf_census_tracts_onondaga_2022, how="left", op="within"
     )
 
     libraries_with_tracts_all = gpd.sjoin(
-        libraries_gdf, gdf_census_tracts_onondaga_all, how="left", predicate="within"
+        libraries_gdf, gdf_census_tracts_onondaga_all, how="left", op="within"
     )
 
     fig = go.Figure()
