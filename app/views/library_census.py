@@ -42,6 +42,11 @@ def process_census_tracts(shapefile_path, census_data_path, county_code):
     return gdf_census_tracts_all, census_df
 
 
+def format_metric_label(column_name: str) -> str:
+    label = column_name.replace("_", " ").replace("percentage", "percent").strip()
+    return label.title()
+
+
 def show_library_census_app():
     """Render the library census data view."""
     census_tracts_shapefile_path = (
@@ -58,13 +63,19 @@ def show_library_census_app():
 
     selected_column_options = census_df.filter(like="percentage").columns
 
+    metric_labels = {
+        column: format_metric_label(column) for column in selected_column_options
+    }
+
     st.sidebar.title("Census Data Metrics")
     selected_column = st.sidebar.selectbox(
-        "Select a value to color the census tracts:", selected_column_options
+        "Select a value to color the census tracts:",
+        selected_column_options,
+        format_func=metric_labels.get,
     )
 
     dropdown_list = [
-        f"{col}: {col.replace('_', ' ').capitalize()}" for col in selected_column_options
+        f"{metric_labels[col]}" for col in selected_column_options
     ]
     st.sidebar.markdown("Data based on the 2022 ACS 5-year Survey")
     st.sidebar.markdown("\n".join([f"- {i}" for i in dropdown_list]))
@@ -79,11 +90,17 @@ def show_library_census_app():
     )
 
     libraries_with_tracts = gpd.sjoin(
-        libraries_gdf, gdf_census_tracts_onondaga_2022, how="left", op="within"
+        libraries_gdf,
+        gdf_census_tracts_onondaga_2022,
+        how="left",
+        predicate="within",
     )
 
     libraries_with_tracts_all = gpd.sjoin(
-        libraries_gdf, gdf_census_tracts_onondaga_all, how="left", op="within"
+        libraries_gdf,
+        gdf_census_tracts_onondaga_all,
+        how="left",
+        predicate="within",
     )
 
     fig = go.Figure()
